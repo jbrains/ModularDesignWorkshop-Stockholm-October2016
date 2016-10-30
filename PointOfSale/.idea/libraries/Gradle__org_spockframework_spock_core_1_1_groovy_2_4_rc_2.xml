@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.spockframework:spock-core:1.1-groovy-2.4-rc-2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spockframework/spock-core/1.1-groovy-2.4-rc-2/7afedb592418658f3df44183fea5da38e45b080e/spock-core-1.1-groovy-2.4-rc-2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spockframework/spock-core/1.1-groovy-2.4-rc-2/be0f18d765f892d4d3dc0d3db0211f69b844a7fd/spock-core-1.1-groovy-2.4-rc-2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
