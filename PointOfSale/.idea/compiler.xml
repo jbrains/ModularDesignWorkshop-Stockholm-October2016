@@ -18,8 +18,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="PointOfSale_main" target="1.5" />
-      <module name="PointOfSale_test" target="1.5" />
+      <module name="PointOfSale_main" target="1.8" />
+      <module name="PointOfSale_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
