@@ -16,7 +16,7 @@ public class SellOneItemControllerTest {
         final Price price = Price.kronor(175);
 
         context.checking(new Expectations() {{
-            allowing(catalog).findPrice(with("12345"));
+            allowing(catalog).findPrice(with("::barcode::"));
             will(returnValue(price));
 
             oneOf(display).displayPrice(with(price));
@@ -24,7 +24,7 @@ public class SellOneItemControllerTest {
 
         final SellOneItemController controller
                 = new SellOneItemController(catalog, display);
-        controller.onBarcode("12345");
+        controller.onBarcode("::barcode::");
 
     }
 
@@ -34,15 +34,15 @@ public class SellOneItemControllerTest {
         final Display display = context.mock(Display.class);
 
         context.checking(new Expectations() {{
-            allowing(catalog).findPrice(with("12345"));
+            allowing(catalog).findPrice(with("::barcode not found::"));
             will(returnValue(null));
 
-            oneOf(display).displayProductNotFoundMessage(with("12345"));
+            oneOf(display).displayProductNotFoundMessage(with("::barcode not found::"));
         }});
 
         final SellOneItemController controller
                 = new SellOneItemController(catalog, display);
-        controller.onBarcode("12345");
+        controller.onBarcode("::barcode not found::");
     }
 
     @Test
@@ -51,8 +51,6 @@ public class SellOneItemControllerTest {
         final Display display = context.mock(Display.class);
 
         context.checking(new Expectations() {{
-            ignoring(catalog);
-
             oneOf(display).displayScannedEmptyBarcode();
         }});
 
