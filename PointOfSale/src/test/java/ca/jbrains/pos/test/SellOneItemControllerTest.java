@@ -59,10 +59,6 @@ public class SellOneItemControllerTest {
         controller.onBarcode("");
     }
 
-    public interface Catalog {
-        Price findPrice(String barcode);
-    }
-
     public interface Display {
         void displayPrice(Price price);
 
@@ -91,17 +87,6 @@ public class SellOneItemControllerTest {
                 display.displayProductNotFoundMessage(barcode);
             else
                 display.displayPrice(price);
-        }
-    }
-
-    public static class Price {
-        public static Price kronor(int kronorValue) {
-            return new Price();
-        }
-
-        @Override
-        public String toString() {
-            return "a Price";
         }
     }
 }
